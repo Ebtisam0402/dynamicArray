@@ -1,4 +1,4 @@
-public class MyStringList implements StringList {
+public class DynamicStringList implements StringList {
     /**
      * Retrieves the string at the specified index in the list.
      *
