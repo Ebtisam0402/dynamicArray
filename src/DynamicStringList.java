@@ -17,7 +17,12 @@ public class DynamicStringList implements StringList {
     @Override
     public String get(int index) {
 
-        return "";
+            if (index < 0 || index >= size()) {
+               throw new IndexOutOfBoundsException (
+                ""
+               ) ;
+            }
+        return stringArray[index];
     }
 
     /**
