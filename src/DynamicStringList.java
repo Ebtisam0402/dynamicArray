@@ -1,8 +1,10 @@
 public class DynamicStringList implements StringList {
     private String[] stringArray;
+    private int size;
 
-    public DynamicStringList(String[] stringArray) {
+    public DynamicStringList(String[] stringArray, int size) {
         this.stringArray = stringArray;
+        this.size = size;
 
     }
 
@@ -18,7 +20,7 @@ public class DynamicStringList implements StringList {
     public String get(int index) {
 
         if (index < 0 || index >= size()) {
-            throw new IndexOutOfBoundsException() ;
+            throw new IndexOutOfBoundsException();
         }
         return stringArray[index];
     }
@@ -36,7 +38,7 @@ public class DynamicStringList implements StringList {
         if (index < 0 || index >= size()) {
             throw new IndexOutOfBoundsException();
         }
-        
+
         stringArray[index] = value;
 
     }
@@ -47,7 +49,10 @@ public class DynamicStringList implements StringList {
      * @param value the string to add to the list.
      */
     public void add(String value) {
-        
+        int lastitem = stringArray.length - 1;
+
+        stringArray[lastitem] = value;
+
     }
 
     /**
