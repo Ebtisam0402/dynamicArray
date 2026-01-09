@@ -1,4 +1,11 @@
 public class DynamicStringList implements StringList {
+    private String[] stringArray;
+
+    public DynamicStringList(String[] stringArray) {
+        this.stringArray = stringArray;
+
+    }
+
     /**
      * Retrieves the string at the specified index in the list.
      *
@@ -7,7 +14,9 @@ public class DynamicStringList implements StringList {
      * @throws IndexOutOfBoundsException if the index is out of range (index < 0 or
      *                                   index >= size()).
      */
+    @Override
     public String get(int index) {
+
         return "";
     }
 
