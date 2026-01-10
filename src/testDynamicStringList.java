@@ -27,4 +27,11 @@ public class testDynamicStringList {
 
     }
 
+    @Test
+    void testRemove() {
+        DynamicStringList arr = new DynamicStringList(new String[] { "pen", "pencil", "marker" });
+        String actual = arr.remove(0);
+        assertEquals("pen", actual);
+    }
+
 }
