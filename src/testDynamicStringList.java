@@ -41,11 +41,27 @@ public class testDynamicStringList {
         assertEquals(3, actual);
     }
 
+
+    @Test
+    void testSizeAnother() {
+        DynamicStringList arr = new DynamicStringList(new String[] { "pen", "pencil", "marker", "book" });
+        int actual = arr.size();
+        assertEquals(4, actual);
+    }
+
     @Test
     void testCapacity() {
         DynamicStringList arr = new DynamicStringList(new String[] { "pen", "pencil", "marker" });
         int actual = arr.capacity();
         assertEquals(3, actual);
+    }
+
+    @Test
+    void testCapacityMoreCapacity() {
+        DynamicStringList arr = new DynamicStringList(new String[10]);
+        arr.add("pen");
+        int actual = arr.capacity();
+        assertEquals(20, actual);
     }
 
 }
