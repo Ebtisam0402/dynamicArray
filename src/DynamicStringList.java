@@ -4,7 +4,7 @@ public class DynamicStringList implements StringList {
 
     public DynamicStringList(String[] stringArray) {
         this.stringArray = stringArray;
-        size = 0;
+        this.size = stringArray.length;
     }
 
     /**
@@ -52,9 +52,9 @@ public class DynamicStringList implements StringList {
     public void add(String value) {
 
         // test
-        int lastitem = stringArray.length - 1;
+        //int lastitem = stringArray.length - 1;
 
-        stringArray[lastitem] = value;
+        stringArray[size++] = value;
 
     }
 
@@ -73,7 +73,12 @@ public class DynamicStringList implements StringList {
             throw new IndexOutOfBoundsException();
         }
 
-        return stringArray[index];
+        String removedString = stringArray[index];
+        for (int i = index; i < size - 1; i++) {
+            stringArray[i] = stringArray[i + 1];
+        }
+
+        return removedString;
     }
 
     /**

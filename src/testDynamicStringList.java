@@ -5,7 +5,9 @@ public class testDynamicStringList {
 
     @Test
     void testGet() {
-
+        DynamicStringList arr = new DynamicStringList(new String[] {"pen", "pencil", "marker"});
+        String acutal = arr.get(1);
+        assertEquals("pencil", acutal);
     }
     
 }
