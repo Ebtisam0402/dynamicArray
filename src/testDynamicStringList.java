@@ -9,5 +9,13 @@ public class testDynamicStringList {
         String acutal = arr.get(1);
         assertEquals("pencil", acutal);
     }
+
+      @Test
+    void testSet() {
+        DynamicStringList arr = new DynamicStringList(new String[] {"pen", "pencil", "marker"});
+        arr.set(2, "eraser");
+        String actual = arr.get(2);
+        assertEquals("eraser", actual);
+    }
     
 }
