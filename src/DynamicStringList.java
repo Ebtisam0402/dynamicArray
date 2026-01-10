@@ -81,7 +81,7 @@ public class DynamicStringList implements StringList {
      * @return the size of the list.
      */
     public int size() {
-        return 0;
+        return stringArray.length;
     }
 
     /**
