@@ -55,7 +55,6 @@ public class DynamicStringList implements StringList {
 
         stringArray[lastitem] = value;
 
-
     }
 
     /**
@@ -91,6 +90,6 @@ public class DynamicStringList implements StringList {
      * @return the capacity of the list.
      */
     public int capacity() {
-        return 0;
+        return stringArray.length;
     }
 }
