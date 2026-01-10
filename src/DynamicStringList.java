@@ -49,7 +49,13 @@ public class DynamicStringList implements StringList {
      * @param value the string to add to the list.
      */
     public void add(String value) {
-       
+
+        // test
+        int lastitem = stringArray.length - 1;
+
+        stringArray[lastitem] = value;
+
+
     }
 
     /**
@@ -61,7 +67,12 @@ public class DynamicStringList implements StringList {
      *                                   index >= size()).
      */
     public String remove(int index) {
-        return "";
+
+        if (index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        return stringArray[index];
     }
 
     /**
