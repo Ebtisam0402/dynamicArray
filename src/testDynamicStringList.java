@@ -5,17 +5,26 @@ public class testDynamicStringList {
 
     @Test
     void testGet() {
-        DynamicStringList arr = new DynamicStringList(new String[] {"pen", "pencil", "marker"});
+        DynamicStringList arr = new DynamicStringList(new String[] { "pen", "pencil", "marker" });
         String acutal = arr.get(1);
         assertEquals("pencil", acutal);
     }
 
-      @Test
+    @Test
     void testSet() {
-        DynamicStringList arr = new DynamicStringList(new String[] {"pen", "pencil", "marker"});
+        DynamicStringList arr = new DynamicStringList(new String[] { "pen", "pencil", "marker" });
         arr.set(2, "eraser");
         String actual = arr.get(2);
         assertEquals("eraser", actual);
     }
-    
+
+    @Test
+    void testAdd() {
+        DynamicStringList arr = new DynamicStringList(new String[] { "pen", "pencil", "marker" });
+        arr.add("eraser");
+        assertEquals(4, arr.size());
+        assertEquals("eraser", arr.get(3));
+
+    }
+
 }

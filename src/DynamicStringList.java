@@ -52,8 +52,15 @@ public class DynamicStringList implements StringList {
     public void add(String value) {
 
         // test
-        //int lastitem = stringArray.length - 1;
-
+        // int lastitem = stringArray.length - 1;
+        // stringArray[size++] = value;
+        if (size == stringArray.length) {
+            String[] newArray = new String[stringArray.length * 2];
+            for (int i = 0; i < size; i++) {
+                newArray[i] = stringArray[i];
+            }
+            stringArray = newArray;
+        }
         stringArray[size++] = value;
 
     }
