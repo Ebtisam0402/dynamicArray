@@ -34,4 +34,12 @@ public class testDynamicStringList {
         assertEquals("pen", actual);
     }
 
+     @Test
+    void testSize() {
+        DynamicStringList arr = new DynamicStringList(new String[] { "pen", "pencil", "marker" });
+        int actual = arr.size();
+        assertEquals(3, actual);
+    }
+
+
 }
